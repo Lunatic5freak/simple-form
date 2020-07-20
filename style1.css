@@ -1,0 +1,158 @@
+body{
+    background-color:black;
+    backface-visibility: initial;
+}
+h1{
+    color: rgba(225,225,225, .1);
+    font-size: 5em;
+    font-style: italic;
+    font-variant-caps: all-petite-caps;
+    text-align: center;
+    background-image: url("download3.jfif");
+    background-repeat: repeat-x;
+    -webkit-background-clip: text;
+    animation: animate 10s linear infinite;
+}
+    @keyframes animate{
+        0%{
+            background-position: left 0px top 10px;
+        }
+        40%{
+            background-position: left 10px top 10px;
+        }
+    }
+
+h2{
+    color: rgba(225,225,225, .1);
+    font-size: 3em;
+    font-style: oblique;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: yellowgreen;
+    background-image: url("downlod5.jfif");
+    background-repeat: repeat-x;
+    -webkit-background-clip: text;
+    animation: animate1 0.5s linear infinite;
+}
+    @keyframes animate1{
+        0%{
+            background-position: left 0px top 10px;
+        }
+        40%{
+            background-position: left 10px top 10px;
+        }
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    image-resolution: 4000px;
+    border: black solid;
+}
+p{
+    color: cyan;
+    border: solid black;
+    font-size: 1.5em;
+    font-style: italic;
+    text-transform: capitalize;
+    text-shadow: black;
+}
+.items{
+    color: darkorchid;
+    font-size: 1.3em;
+    text-transform: capitalize;
+    text-shadow: black;
+    border: black solid;
+    max-width: 8em;
+    padding: 1em;
+}
+a:hover::before{
+    background-color: yellow;
+    font-size: 1.5em;
+}
+a:active{
+    background-color: black;
+}
+#para{
+    font-size: x-large;
+    color: blue;
+    width: 50%;
+    text-transform: capitalize;
+}
+#button{
+    font-size: 4em;
+    border: black;
+    border-radius: 4em;
+    transform: (-50%,-50%);
+    margin-left: 50%;
+    margin-right: 50%;
+    color: #fff;
+    text-decoration: none;
+    background:linear-gradient(90deg, #03a9f4 ,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 400%;
+    z-index: -1;
+}
+#button:hover{
+    animation: animate 8s linear infinite;
+}
+@keyframes animate{
+    0%{
+        background-position:0%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
+#button:before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background:linear-gradient(90deg, #03a9f4 ,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 400%;
+    border-radius: 4em;
+    opacity: 0;
+    transition: 0.5s;
+}
+#button:hover:before{
+    filter: blur(20px);
+    opacity: 1;
+    animation: animate 8s linear infinite;
+}
+.dropbtn{
+    background-color: #4caf50;
+    color: white;
+
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover{
+    background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+

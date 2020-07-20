@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+</head>
+<link rel="stylesheet" href="style2.css">
+
+<body>
+    <form id="myform">
+        <div class="details">
+            <h1>form for lucky draw</h1>
+            <h2>pls fill ur details corrrectly</h2>
+            <h3 id="datetime" style="color: white;"></h3>
+            <div class="detail">
+                <label for="fname">first name:</label>
+                <input type="text" name="fname" id="fname" placeholder="enter ur first name" maxlength="50"><br><br>
+                <label for="lname">last name:</label>
+                <input type="text" name="lname" id="lname" placeholder="enter ur last name" maxlength="50"><br><br>
+                <label for="number">mobile number:</label>
+                <input type="number" id="number" placeholder="enter mobile number"><br><br>
+                <label for="email">enetr ur email:</label>
+                <input type="email" id="email" placeholder="enter ur email"><br><br>
+                <label for="address">enter address:</label>
+                <input type="text" id="address" placeholder="enter ur address">
+            </div>
+        </div>
+        <div id="gender">
+            <label for="gender">pls select urGender</label><br>
+            <input type="radio" name="gender" value="male">Male
+            <input type="radio" name="gender" value="female">Female
+            <input type="radio" name="gender" value="other">Other <br>
+        </div>
+        <div id="ever">
+            <br><label for="ever">Have u ever been to jajpur</label><br>
+            <input type="radio" name="ever" id="ever">yes <br>
+            <input type="radio" name="ever" id="ever">No <br>
+        </div>
+        <div id="answer">
+            <br><label for="ans">why do u want to visit jajpur</label><br>
+            <textarea name="msg" id="ans" cols="30" rows="5" placeholder="write here"></textarea><br>
+            <label for="ans1">write something on ur distirct</label><br>
+            <textarea name="msg" id="ans1" cols="30" rows="5" placeholder="write here"></textarea>
+        </div>
+        <div id="any">
+            <p>how many days u want to spend in jajpur</p>
+            <label for="place1">select anyone from below</label>
+            <select name="place1" id="dropdown" style="size: 1em;">
+                <option value="">select date</option>
+                <option value="3">3 days</option>
+                <option value="5">5 days</option>
+                <option value="7">7 days</option>
+            </select>
+        </div>
+        <div>
+            <p id="terms">pls read all terms and conditions carefully(<a href="javascript:show()" id="full">terms and conditions</a></a>)</p>
+            <p id="terms1" style="display: none; color:lawngreen;">*My data will be used for lucky draw.
+                *My data will be used for futere contact.
+            </p>
+        </div>
+        <div style="color: lawngreen;">
+            <input type="checkbox" id="checked">I have read all the terms and aggreed to that.
+        </div>
+        <br><br><input type="button" id="button" value="submit" onclick="myFunction()">
+    </form>
+    <script type="text/javascript">
+        document.getElementById("datetime").innerHTML=Date();
+        function myFunction() {
+            var a = document.getElementById("fname").value;
+            if (a != "" && document.getElementById("checked").checked==true) {
+                alert("form has submitted");
+            }
+            else if(a==""){
+                alert("enter data");
+            }
+            else if(document.getElementById("checked").checked==false){
+                alert("pls read all terms and conditions");
+            }
+            else{
+                alert("form submitted");
+            }
+        }
+        function show(){
+            document.getElementById("terms1").style.display="block";
+        }
+    </script>
+</body>
+
+</html>
